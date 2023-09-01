@@ -1,0 +1,17 @@
+.footer {
+    margin: 100px 0 40px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  .footer a {
+    color: steelblue;
+    text-decoration: none;
+    
+  }
