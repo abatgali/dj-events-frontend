@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+
+.container {
+    margin: 60px auto;
+    max-width: 960px;
+    padding: 0 30px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    
+  }
+
+   .container h1 {
+    font-family: 'Oswald', 'sans-serif';
+    font-size: 30px;
+  }
+  
+
+  
+
+
