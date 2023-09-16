@@ -1,11 +1,9 @@
-
 import EventItem from '@/components/EventItem';
 import Layout from '@/components/Layout';
 import { API_URL } from '@/config/index';
-import Link from "next/link";
 
 export default function EventsPage({events}) {
-  // console.log(events);
+   console.log(events);
   return (
       <Layout>
           <h1>All Events</h1>
@@ -22,11 +20,18 @@ export default function EventsPage({events}) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/api/events`)
-  const events = await res.json()
+  try {
+    const res = await fetch(`${API_URL}/events/?[populate]=*`);
+    const events = await res.json();
+    
 
-  return {
-    props: {events},
-    revalidate: 1
+    return {
+      props: {events: events.data}
+    }
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return {
+      props: { events: [] },
+    };
   }
 }
